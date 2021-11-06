@@ -10,6 +10,8 @@ export const completeTodo = createAction(
   props<{ id: number }>()
 );
 
+export const completeAllTodos = createAction('[TODOs] Complete all todos');
+
 export const editTodo = createAction(
   '[TODO] Edit todo',
   props<{ id: number; title: string }>()
@@ -19,3 +21,5 @@ export const deleteTodo = createAction(
   '[TODO] Delete todo',
   props<{ id: number }>()
 );
+
+export const deleteAllTodos = createAction('[TODOS] Delete all todos');

@@ -4,5 +4,21 @@
       [todo]="todo"
       *ngFor="let todo of todos"
     ></app-todo-list-item>
+    <div class="d-flex justify-content-center my-2" *ngIf="todos.length > 1">
+      <button
+        (click)="completeAllTasks()"
+        class="btn btn-success"
+        type="button"
+      >
+        Complete All
+      </button>
+      <button
+        (click)="deleteAllTasks()"
+        class="btn btn-danger mx-2"
+        type="button"
+      >
+        Delete All
+      </button>
+    </div>
   </div>
 </div>
